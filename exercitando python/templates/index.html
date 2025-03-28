@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Dias</title>
+    <style>
+        .centralizado {
+           text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de Dias</h1>
+    <form method="POST">
+        <label for="data_inicial">Data Inicial (AAAA-MM-DD):</label>
+        <input type="date" id="data_inicial" name="data_inicial" required>
+        <br><br>
+        <label for="data_final">Data Final (AAAA-MM-DD):</label>
+        <input type="date" id="data_final" name="data_final" required>
+        <br><br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado is not none %}
+        <h2>Resultado: {{ resultado }} dias</h2>
+    {% endif %}
+</body>
+</html>
